@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="assets/images/logoDreamsBeer.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Dreams Beer - Personalizar</title>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="sticky top-0 z-50 bg-slate-600 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <img class="h-20 w-auto" src="assets/images/logoDreamsBeer.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-white hover:text-black font-medium">Inicio</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="max-w-4xl mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-8">Crea tu propia cerveza 🍺</h1>
+
+        <form id="beerForm" class="space-y-8">
+            <!-- Nombre del cliente -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Tu nombre</label>
+                <input type="text" required name="nombre" class="w-full border rounded-lg p-2"
+                    placeholder="Ej. Juan Pérez" />
+            </div>
+
+            <!-- Tipo de Malta -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Tipo de malta 🍞</label>
+                <select class="w-full border rounded-lg p-2">
+                    <option>Maltas claras - Suaves y dulces</option>
+                    <option>Maltas oscuras - Tostadas, notas a café o chocolate</option>
+                </select>
+            </div>
+
+            <!-- Lúpulo -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Lúpulo 🌿</label>
+                <select class="w-full border rounded-lg p-2">
+                    <option>Cítricos</option>
+                    <option>Florales</option>
+                    <option>Herbales</option>
+                    <option>Resinosos</option>
+                    <option>Frutales</option>
+                </select>
+            </div>
+
+            <!-- Levadura -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Levadura 🍺</label>
+                <select class="w-full border rounded-lg p-2">
+                    <option>Afrutada</option>
+                    <option>Especiada</option>
+                    <option>Neutra</option>
+                </select>
+            </div>
+
+            <!-- Graduación -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Graduación alcohólica 🔥</label>
+                <input type="range" min="3" max="10" step="0.1" class="w-full accent-amber-600" />
+                <div class="text-sm text-gray-600">Desde ligera (3%) hasta fuerte (10%)</div>
+            </div>
+
+            <!-- Cuerpo y textura -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Cuerpo y textura 💧</label>
+                <select class="w-full border rounded-lg p-2">
+                    <option>Ligera y refrescante</option>
+                    <option>Densa y cremosa (avena, trigo)</option>
+                </select>
+            </div>
+
+            <!-- Adjuntos especiales -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Adjuntos especiales 🥭🍫🌶</label>
+                <div class="grid grid-cols-2 gap-2">
+                    <label><input type="checkbox" class="mr-2" /> Mango</label>
+                    <label><input type="checkbox" class="mr-2" /> Maracuyá</label>
+                    <label><input type="checkbox" class="mr-2" /> Cereza</label>
+                    <label><input type="checkbox" class="mr-2" /> Canela</label>
+                    <label><input type="checkbox" class="mr-2" /> Cacao</label>
+                    <label><input type="checkbox" class="mr-2" /> Vainilla</label>
+                    <label><input type="checkbox" class="mr-2" /> Sal</label>
+                    <label><input type="checkbox" class="mr-2" /> Chile</label>
+                    <label><input type="checkbox" class="mr-2" /> Café</label>
+                    <label><input type="checkbox" class="mr-2" /> Coco</label>
+                    <label><input type="checkbox" class="mr-2" /> Lactosa</label>
+                </div>
+            </div>
+
+            <!-- Gasificación -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Nivel de gasificación 🫧</label>
+                <select class="w-full border rounded-lg p-2">
+                    <option>Burbujeante</option>
+                    <option>Suave</option>
+                </select>
+            </div>
+
+            <!-- Color -->
+            <div>
+                <label class="block text-lg font-semibold mb-2">Color 🎨</label>
+                <select class="w-full border rounded-lg p-2">
+                    <option>Dorado claro</option>
+                    <option>Ámbar</option>
+                    <option>Cobrizo</option>
+                    <option>Marrón</option>
+                    <option>Negro intenso</option>
+                </select>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="text-center pt-6">
+                <button type="submit"
+                    class="bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition">
+                    ¡Crear mi cerveza!
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="bg-white rounded-xl shadow-lg max-w-xl w-full p-6 text-center relative">
+            <video class="w-full rounded-lg mb-4" autoplay muted loop playsinline>
+                <source src="assets/videos/Promocional5.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+            <h2 class="text-2xl font-bold mb-2">¡Tu cerveza ha sido creada! 🍻</h2>
+            <p class="text-gray-700">Gracias por tu pedido. En breve recibirás los detalles de tu creación
+                personalizada.</p>
+            <button onclick="closeModal()" class="mt-6 bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700">
+                Cerrar
+            </button>
+        </div>
+    </div>
+
+    <script src="src/modalCreate.js"></script>
+</body>
+
+</html>

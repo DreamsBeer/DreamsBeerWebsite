@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="assets/images/logoDreamsBeer.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Dreams Beer</title>
+</head>
+
+<body class="m-0 p-0 bg-black text-white">
+
+    <header class="sticky top-0 z-50 bg-slate-600 shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <img class="h-20 w-auto" src="assets/images/logoDreamsBeer.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-white hover:text-black font-medium">Inicio</a>
+                    <a href="#sobrenosotros" class="text-white hover:text-black font-medium">Nosotros</a>
+                    <a href="personalize.html" class="text-white hover:text-black font-medium">Crea tu cerveza</a>
+                    <a href="#contacto" class="text-white hover:text-black font-medium">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative h-[70vh] w-full overflow-hidden">
+        <div id="three-container" class="w-full h-full absolute top-0 left-0 z-0"></div>
+        <div class="absolute inset-0 flex items-center justify-center z-10">
+            <h1 class="text-white text-4xl md:text-6xl font-bold drop-shadow-lg text-center">
+                ¡Exprésate en lo que bebes!
+            </h1>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="bg-white py-16 px-6 md:px-12" id="sobrenosotros">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Sobre Nosotros</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Somos una marca comprometida con la autenticidad, el sabor y la comunidad. Desde nuestros inicios,
+                nos hemos dedicado a crear productos que no solo refrescan, sino que también cuentan una historia.
+                Cada botella representa una expresión única de creatividad, pasión y dedicación a lo artesanal.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                Creemos que lo que bebes dice mucho de ti. Por eso, diseñamos experiencias que conectan a las personas
+                con sus gustos, valores e identidad. Bienvenido a una nueva forma de disfrutar.
+            </p>
+
+            <!-- Contenedor de Video -->
+            <div class="mt-10 aspect-video max-w-4xl mx-auto shadow-lg rounded-xl overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                    <source src="assets/videos/Promocional5.mp4" type="video/mp4" />
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-amber-600 py-16 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-black  mb-6">¡Crea tu propia cerveza!</h2>
+            <p class="text-lg text-black font-bold mb-8">
+                ¿Te imaginas una cerveza hecha exactamente a tu gusto? Con nuestra herramienta puedes personalizar
+                cada detalle: malta, lúpulo, levadura, cuerpo, sabor, color y más. Exprésate en lo que bebes 🍻
+            </p>
+            <a href="personalize.html"
+                class="inline-block bg-amber-100 text-black text-lg font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-amber-700 transition">
+                Personaliza tu cerveza
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 px-6 md:px-12" id="contacto">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">Contáctanos</h2>
+            <p class="text-center text-gray-600 mb-12">
+                ¿Tienes dudas, ideas o quieres hablar con nosotros? ¡Escríbenos! Estamos felices de escucharte.
+            </p>
+
+            <form class="space-y-6">
+                <!-- Nombre -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                    <input type="text" required
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                        placeholder="Tu nombre completo" />
+                </div>
+
+                <!-- Correo -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                    <input type="email" required
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                        placeholder="tucorreo@email.com" />
+                </div>
+
+                <!-- Asunto -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+                    <input type="text"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                        placeholder="¿Sobre qué quieres hablar?" />
+                </div>
+
+                <!-- Mensaje -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                    <textarea rows="5" required
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                        placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <!-- Botón -->
+                <div class="text-center pt-4">
+                    <button type="submit"
+                        class="bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition">
+                        Enviar mensaje
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-100 py-10 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Logo / Marca -->
+            <div>
+                <h3 class="text-5xl font-bold text-amber-500 mb-3">Dreams Beer</h3>
+                <p class="text-xl text-gray-400">
+                    Personaliza tu cerveza, exprésate en lo que bebes. Sabores únicos, creados por ti.
+                </p>
+            </div>
+
+            <!-- Enlaces rápidos -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Enlaces</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Inicio</a></li>
+                    <li><a href="#sobrenosotros" class="hover:text-white transition">Sobre Nosotros</a></li>
+                    <li><a href="personalize.html" class="hover:text-white transition">Personaliza tu Cerveza</a></li>
+                    <li><a href="#contacto" class="hover:text-white transition">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-amber-400 transition" aria-label="Instagram">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M7.5 2A5.5 5.5 0 002 7.5v9A5.5 5.5 0 007.5 22h9a5.5 5.5 0 005.5-5.5v-9A5.5 5.5 0 0016.5 2h-9zm0 2h9A3.5 3.5 0 0120 7.5v9a3.5 3.5 0 01-3.5 3.5h-9A3.5 3.5 0 014 16.5v-9A3.5 3.5 0 017.5 4zm9.25 1a.75.75 0 100 1.5.75.75 0 000-1.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-amber-400 transition" aria-label="Facebook">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12a10 10 0 10-11.5 9.87v-6.99h-2.1v-2.88h2.1V9.41c0-2.07 1.23-3.22 3.11-3.22.9 0 1.85.16 1.85.16v2.03h-1.04c-1.03 0-1.35.64-1.35 1.3v1.56h2.29l-.37 2.88h-1.92v6.99A10 10 0 0022 12z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-amber-400 transition" aria-label="Twitter">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M22.46 6c-.77.35-1.6.58-2.46.69a4.28 4.28 0 001.88-2.37 8.58 8.58 0 01-2.72 1.04 4.27 4.27 0 00-7.28 3.9A12.1 12.1 0 013 4.8a4.27 4.27 0 001.32 5.7 4.23 4.23 0 01-1.94-.54v.05a4.27 4.27 0 003.43 4.19 4.29 4.29 0 01-1.94.07 4.27 4.27 0 003.98 2.96A8.57 8.57 0 012 19.54a12.07 12.07 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.38-.01-.57A8.72 8.72 0 0024 5.11a8.49 8.49 0 01-2.54.7z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-sm text-gray-500">
+            © 2025 Dreams Beer. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.174.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.174.0/examples/jsm/"
+          }
+        }
+        </script>
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
